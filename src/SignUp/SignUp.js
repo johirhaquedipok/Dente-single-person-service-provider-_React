@@ -9,6 +9,7 @@ import auth from "../firebase.init";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
 const SignUp = () => {
+  const [validated, setValidated] = useState(false);
   const navigate = useNavigate();
   const [check, setCheck] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -16,14 +17,20 @@ const SignUp = () => {
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const handleSignUp = async (event) => {
     event.preventDefault();
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+    }
+
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
 
+    setValidated(true);
     await createUserWithEmailAndPassword(email, password);
 
     await updateProfile({ displayName: name });
-    alert("Updated email address");
+    if (user) alert("Updated email address");
   };
   if (user) {
     navigate("/home");
@@ -32,10 +39,11 @@ const SignUp = () => {
     <>
       <Row className="justify-content-center">
         <Col md={6}>
-          <Form onSubmit={handleSignUp}>
+          <Form noValidate validated={validated} onSubmit={handleSignUp}>
             <Form.Group className="mb-3" controlId="formBasicName">
               <Form.Label>Name</Form.Label>
               <Form.Control
+                required
                 name="name"
                 type="name"
                 placeholder="Enter your name"
@@ -44,6 +52,7 @@ const SignUp = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                required
                 name="email"
                 type="email"
                 placeholder="Enter email"
@@ -56,6 +65,7 @@ const SignUp = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                required
                 name={"password"}
                 type="password"
                 placeholder="Password"
