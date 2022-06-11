@@ -54,7 +54,7 @@ const Login = () => {
   }, [navigate, user, from]);
   return (
     <>
-      <Row>
+      <Row className="justify-content-center">
         <Col md={6}>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -76,24 +76,29 @@ const Login = () => {
                 ref={passwordRef}
               />
             </Form.Group>
+            <div className="row mb-4">
+              <Col className="col">
+                <Button
+                  variant="link"
+                  type="submit"
+                  onClick={handleResetPassword}
+                >
+                  Forgot Your Password
+                </Button>
+              </Col>
+            </div>
+            <div className="d-grid gap-2">
+              <Button variant="primary" type="submit">
+                Sing in
+              </Button>
+            </div>
 
-            <Button
-              variant={emailRef && passwordRef ? "primary" : "light"}
-              type="submit"
-            >
-              Submit
-            </Button>
-            <Button variant="link" type="submit" onClick={handleResetPassword}>
-              Forgot Your Password
-            </Button>
             <div>
               <Button variant="link" as={Link} to="/signup">
                 Don't have any account?
               </Button>
             </div>
           </Form>
-        </Col>
-        <Col md={6}>
           <SocialSignIn />
         </Col>
       </Row>
