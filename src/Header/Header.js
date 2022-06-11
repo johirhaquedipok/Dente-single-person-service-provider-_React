@@ -16,7 +16,7 @@ const Header = () => {
     <Navbar bg="light" expand="sm">
       <Container>
         <Navbar.Brand as={Link} to="/home">
-          Genius Car
+          Dente
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -25,7 +25,12 @@ const Header = () => {
               Home
             </Nav.Link>
             {user ? (
-              <Button onClick={handleSignOut}>Sign Out</Button>
+              <>
+                <Button onClick={handleSignOut}>Sign Out</Button>
+                <Nav.Link as={Link} to="/myprofile">
+                  MyProfile
+                </Nav.Link>
+              </>
             ) : (
               <>
                 <Nav.Link as={Link} to="/login">
@@ -36,9 +41,6 @@ const Header = () => {
                 </Nav.Link>
               </>
             )}
-            <Nav.Link as={Link} to="/myprofile">
-              MyProfile
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

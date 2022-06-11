@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import CheckOut from "./CheckOut/CheckOut";
 
@@ -13,22 +14,31 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/services/:serviceId" element={<ServiceDetails />} />
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/checkout"
-          element={
-            <RequireAuth>
-              <CheckOut />
-            </RequireAuth>
-          }
-        />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/myprofile" element={<MyProfile />} />
-      </Routes>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/services/:serviceId" element={<ServiceDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/checkout"
+            element={
+              <RequireAuth>
+                <CheckOut />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/myprofile"
+            element={
+              <RequireAuth>
+                <MyProfile />
+              </RequireAuth>
+            }
+          />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </Container>
     </>
   );
 }
