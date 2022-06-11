@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { BsGoogle } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../firebase.init";
 const SocialSignIn = () => {
   const navigate = useNavigate();
@@ -20,39 +20,33 @@ const SocialSignIn = () => {
   }
   return (
     <>
-      <div className="text-center">
-        <button type="button" className="btn btn-link btn-floating mx-1">
-          <i className="fab fa-facebook-f"></i>
-        </button>
-
-        <button type="button" className="btn btn-link btn-floating mx-1">
-          <i className="fab fa-google"></i>
-        </button>
-
-        <button type="button" className="btn btn-link btn-floating mx-1">
-          <i className="fab fa-twitter"></i>
-        </button>
-
-        <button type="button" className="btn btn-link btn-floating mx-1">
-          <i className="fab fa-github"></i>
-        </button>
-      </div>
       <div>{errorElement}</div>
-      <div>Or Sign in with </div>
-      <div className="d-flex flex-column mb-2 mt-5">
+      <div className="text-center mt-4">Or Sign in with </div>
+      <div className="d-flex align-items-center justify-content-between  mb-2 mt-5">
         <Button
           variant="primary"
-          size="lg"
-          className=" mb-2"
+          className="d-flex align-items-center justify-content-center mb-2"
           onClick={() => signInWithGoogle()}
         >
-          <BsGoogle /> Google
+          <BsGoogle /> <span className="ms-2">Google </span>
         </Button>
-        <Button variant="secondary" size="lg" className=" mb-2">
-          GitHub
+        <Button
+          variant="secondary"
+          className=" d-flex align-items-center justify-content-center mb-2"
+        >
+          <BsGithub /> <span className="ms-2">GitHub </span>
         </Button>
-        <Button variant="info" size="lg" className=" mb-2">
-          Facebook
+        <Button
+          variant="info"
+          className="d-flex align-items-center justify-content-center mb-2"
+        >
+          <BsFacebook /> <span className="ms-2">Facebook </span>
+        </Button>
+      </div>
+      <div className=" d-flex align-items-center justify-content-center">
+        Don't have any account?
+        <Button variant="link" as={Link} to="/signup">
+          Register Now
         </Button>
       </div>
     </>
