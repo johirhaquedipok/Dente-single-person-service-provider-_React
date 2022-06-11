@@ -4,9 +4,9 @@ import { toast, ToastContainer } from "react-toastify";
 
 import {
   useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword
+  useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../firebase.init";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
@@ -92,10 +92,14 @@ const Login = () => {
                 Sing in
               </Button>
             </div>
-
-            
           </Form>
           <SocialSignIn />
+          <div className=" d-flex align-items-center justify-content-center">
+            Don't have any account?
+            <Button variant="link" as={Link} to="/signup">
+              Register Now
+            </Button>
+          </div>
         </Col>
       </Row>
 
