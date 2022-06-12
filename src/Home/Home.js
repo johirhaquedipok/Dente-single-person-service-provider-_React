@@ -1,15 +1,11 @@
 import { Container } from "react-bootstrap";
 import Services from "../Services/Services";
+import HomeCarousels from "./HomeCarousels";
 
 const Home = () => {
   return (
-    <Container
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Container>
+      <HomeCarousels />
       <Services />
     </Container>
   );

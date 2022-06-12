@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
 import CheckOut from "./CheckOut/CheckOut";
+import Footer from "./Footer/Footer";
 
 import Header from "./Header/Header";
 import Home from "./Home/Home";
@@ -39,6 +40,7 @@ function App() {
           />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
+        <Footer />
       </Container>
     </>
   );
