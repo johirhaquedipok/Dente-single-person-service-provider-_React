@@ -62,7 +62,7 @@ const Blog = () => {
                     and Twitter, and more.
                   </p>
                   <p>
-                    There are some ways to authenticate can be done through
+                    There are some other ways authentication can be done through
                     cards, retina scans, voice recognition, and fingerprints.
                   </p>
                 </Accordion.Body>

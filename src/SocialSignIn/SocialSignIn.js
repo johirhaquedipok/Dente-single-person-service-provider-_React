@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import {
+  useSignInWithFacebook,
   useSignInWithGithub,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
@@ -9,27 +11,35 @@ import auth from "../firebase.init";
 const SocialSignIn = () => {
   const navigate = useNavigate();
   // google sign in
-  const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
+  const [signInWithGoogle, googleUser, googleError] = useSignInWithGoogle(auth);
 
   // github sign in
-  const [signInWithGithub, githubUser, githubLoading, githubError] =
-    useSignInWithGithub(auth);
+  const [signInWithGithub, githubUser, githubError] = useSignInWithGithub(auth);
+
+  // facebook sign in
+  const [signInWithFacebook, facebookUser, facebookError] =
+    useSignInWithFacebook(auth);
+
+  // errror message
   let errorElement;
-  if (googleError || githubError) {
+  if (googleError || githubError || facebookError) {
     errorElement = (
       <div>
         <p className="text-danger">
-          Error: {googleError?.message} {githubError?.message}
+          Error: {googleError?.message} {githubError?.message}{" "}
+          {facebookError?.message}
         </p>
       </div>
     );
   }
 
   // after succesful sign in it will navigate you to the home page
-  if (googleUser || githubUser) {
-    navigate("/home");
-  }
+  // this use Effect is used for broweserrouter warning in the console while loggin in with social media
+  useEffect(() => {
+    if (googleUser || githubUser || facebookUser) {
+      navigate("/home");
+    }
+  }, [googleUser, githubUser, facebookUser, navigate]);
   return (
     <>
       <div>{errorElement}</div>
@@ -57,6 +67,7 @@ const SocialSignIn = () => {
           <Button
             variant="light"
             className="d-flex align-items-center justify-content-center mb-2 border"
+            onClick={() => signInWithFacebook()}
           >
             <BsFacebook /> <span className="ms-1">Facebook</span>
           </Button>
