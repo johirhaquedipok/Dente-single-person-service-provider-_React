@@ -9,16 +9,24 @@ const Service = ({ service }) => {
   };
   return (
     <Col>
-      <Card>
+      <Card
+        className="bg-white overflow-hidden"
+        style={{ borderRadius: "1rem" }}
+      >
         <Card.Img variant="top" src={img} alt={name} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
-            {description}
-            {price}
+            {description.length < 50
+              ? description
+              : description?.slice(0, 50).concat("...")}
           </Card.Text>
-          <Button variant="primary" onClick={() => handleService(id)}>
-            {" "}
+          <Card.Text className="fw-bold">Price: ${price}</Card.Text>
+          <Button
+            variant="light"
+            className="border"
+            onClick={() => handleService(id)}
+          >
             More Info
           </Button>
         </Card.Body>
