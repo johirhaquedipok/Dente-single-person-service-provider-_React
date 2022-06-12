@@ -40,7 +40,8 @@ Minimum 9 meaningful git commit👍
 
 ##Bonus:
 Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No lorem ipsum please.👍
-Meaningful readme.md file containing your website name, and link to your live site. And at least five bullet points mentioning your website's different features and functionality. And a list of technologies (frameworks, libraries) used in your project.
+Meaningful readme.md file containing your website name, and link to your live site.
+And at least five bullet points mentioning your website's different features and functionality. And a list of technologies (frameworks, libraries) used in your project.
 Make the home page of your website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.
 Clean and organized Code. Organize components and add comments when needed
 Display error when user email address or password don't match.
