@@ -25,10 +25,11 @@ const Welcome = () => {
                 alt={"banner"}
               />
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="align-self-end">
+              <div className="display-1">What's with the Denta</div>
               <Row xs={1} md={2} className="g-4 mt-4 ">
                 <Col>
-                  <Card>
+                  <Card className="shadow-sm border-0">
                     <Card.Body>
                       <Card.Title className="fw-bolder">500+ </Card.Title>
                       <Card.Text className="lead">Happy Patients</Card.Text>
@@ -36,15 +37,15 @@ const Welcome = () => {
                   </Card>
                 </Col>
                 <Col>
-                  <Card>
+                  <Card className="shadow-sm border-0">
                     <Card.Body>
-                      <Card.Title className="fw-bolder">88+ </Card.Title>
-                      <Card.Text className="lead">Qualified Doctors</Card.Text>
+                      <Card.Title className="fw-bolder">90+ </Card.Title>
+                      <Card.Text className="lead">Satisfied Reviews</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
                 <Col>
-                  <Card>
+                  <Card className="shadow-sm border-0">
                     <Card.Body>
                       <Card.Title className="fw-bolder">25+ </Card.Title>
                       <Card.Text className="lead">Years Experience</Card.Text>
@@ -52,12 +53,13 @@ const Welcome = () => {
                   </Card>
                 </Col>
                 <Col>
-                  <Card>
+                  <Card className="shadow-sm border-0">
                     <Card.Body>
                       <Card.Title className="fw-bolder">55+ </Card.Title>
                       <Card.Text className="lead">Dental Awards</Card.Text>
                     </Card.Body>
                   </Card>
+                  {/* https://preview.themeforest.net/item/donto-dental-clinic-medical-health-react-template/full_screen_preview/28998255 */}
                 </Col>
               </Row>
             </Col>

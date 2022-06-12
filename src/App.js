@@ -1,5 +1,5 @@
-import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
+import Blog from "./Blog/Blog";
 import CheckOut from "./CheckOut/CheckOut";
 import Footer from "./Footer/Footer";
 
@@ -18,33 +18,33 @@ function App() {
     <>
       <Header />
 
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/services/:serviceId" element={<ServiceDetails />} />
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/checkout"
-            element={
-              <RequireAuth>
-                <CheckOut />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="/myprofile"
-            element={
-              <RequireAuth>
-                <MyProfile />
-              </RequireAuth>
-            }
-          />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Container>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/services/:serviceId" element={<ServiceDetails />} />
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <CheckOut />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/myprofile"
+          element={
+            <RequireAuth>
+              <MyProfile />
+            </RequireAuth>
+          }
+        />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
       <Footer />
     </>
   );

@@ -19,11 +19,11 @@ You can put anything on the checkout page. If you want to do some extra optional
 
 If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.👍
 
-You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react firebase hook to implement the login system. And don't forget to make the Email and password field a required field.
+You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react firebase hook to implement the login system. And don't forget to make the Email and password field a required field.👍
 
 Also, implement at least one extra login, which could be (facebook, github, google, etc).
 
-Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.
+Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.👍
 
 Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route
 
@@ -33,7 +33,7 @@ Add two more routes. one route will be blogs. On the blog page, you will need to
 
 13.3 What other services does firebase provide other than authentication
 
-You will create an about me page. It could be the about route. There will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal.
+You will create an about me page. It could be the about route. There you will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal.
 
 Create a 404 page (not found page)👍
 Minimum 9 meaningful git commit👍

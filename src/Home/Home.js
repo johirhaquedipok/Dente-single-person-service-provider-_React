@@ -5,11 +5,13 @@ import HomeCarousels from "./HomeCarousels";
 
 const Home = () => {
   return (
-    <Container>
+    <>
       <HomeCarousels />
-      <Welcome />
-      <Services />
-    </Container>
+      <Container>
+        <Welcome />
+        <Services />
+      </Container>
+    </>
   );
 };
 

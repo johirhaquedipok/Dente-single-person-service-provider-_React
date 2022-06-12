@@ -10,7 +10,7 @@ const Service = ({ service }) => {
   return (
     <Col>
       <Card
-        className="bg-white overflow-hidden"
+        className="bg-white overflow-hidden shadow-sm border-0"
         style={{ borderRadius: "1rem" }}
       >
         <Card.Img variant="top" src={img} alt={name} />
