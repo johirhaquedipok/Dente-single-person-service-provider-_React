@@ -41,6 +41,10 @@ const Header = () => {
                 </Nav.Link>
               </>
             )}
+            <Nav.Link as={Link} to="/welcome">
+              {" "}
+              Welcome
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

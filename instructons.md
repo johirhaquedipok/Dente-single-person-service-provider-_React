@@ -10,14 +10,14 @@ Make sure your design and website idea is unique. First, finalize your idea (Wha
 
 Give your website a name. The name should appear on the website and be displayed on the website's title.👍
 Home page will have a header (simple navbar), banner, services section, and a footer. The banner could be static or a carousel. Either one will be alright.👍
-Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.
+Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.👍
 The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button.👍
 
 Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page
 
 You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description.
 
-If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
+If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.👍
 
 You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react firebase hook to implement the login system. And don't forget to make the Email and password field a required field.
 
@@ -35,8 +35,8 @@ Add two more routes. one route will be blogs. On the blog page, you will need to
 
 You will create an about me page. It could be the about route. There will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal.
 
-Create a 404 page (not found page)
-Minimum 9 meaningful git commit
+Create a 404 page (not found page)👍
+Minimum 9 meaningful git commit👍
 
 ##Bonus:
 Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No lorem ipsum please.

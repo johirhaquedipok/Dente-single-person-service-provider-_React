@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
 
@@ -6,30 +6,63 @@ const Welcome = () => {
   return (
     <>
       {/* vertical line */}
-      <div className=" mt-4">
+      <div className=" my-4">
         <VerticleLine style={{ height: "40px" }} />
         {/* heading section */}
         <SectionHeading p={"Welcome"} text={"To Our Family"} />
 
         {/* vertical line */}
         <VerticleLine style={{ height: "150px" }} />
-        <Row xs={1} md={2} lg={4} className="g-4 mt-4 ">
-          {Array.from({ length: 4 }).map((_, idx) => (
-            <Col key={idx}>
-              <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+        {/* section details */}
+        <Container>
+          <Row>
+            <Col lg={6} className="overflow-hidden">
+              <Image
+                fluid
+                src={
+                  "https://donto-react.netlify.app/static/media/about-banner1.ce5f70ed.png"
+                }
+                alt={"banner"}
+              />
             </Col>
-          ))}
-        </Row>
+            <Col lg={6}>
+              <Row xs={1} md={2} className="g-4 mt-4 ">
+                <Col>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title className="fw-bolder">500+ </Card.Title>
+                      <Card.Text className="lead">Happy Patients</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title className="fw-bolder">88+ </Card.Title>
+                      <Card.Text className="lead">Qualified Doctors</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title className="fw-bolder">25+ </Card.Title>
+                      <Card.Text className="lead">Years Experience</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title className="fw-bolder">55+ </Card.Title>
+                      <Card.Text className="lead">Dental Awards</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </>
   );
