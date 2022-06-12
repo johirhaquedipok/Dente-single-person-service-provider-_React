@@ -13,7 +13,7 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <Navbar bg="light" expand="sm">
+    <Navbar bg="light" expand="sm" className="border-bottom">
       <Container>
         <Navbar.Brand as={Link} to="/home">
           Dente
@@ -46,6 +46,9 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/blog">
               Blog
+            </Nav.Link>
+            <Nav.Link as={Link} to="/aboutme">
+              AboutMe
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

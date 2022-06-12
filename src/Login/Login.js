@@ -8,6 +8,8 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import SectionHeading from "../CommonComponents/SectionHeading";
+import VerticleLine from "../CommonComponents/VerticleLine";
 import auth from "../firebase.init";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
@@ -54,12 +56,19 @@ const Login = () => {
   }, [navigate, user, from]);
   return (
     <>
-      <Row className="justify-content-center my-3 bg-light py-4">
-        <Col md={6}>
+      <Row className="justify-content-center mb-3 bg-light py-4">
+        <VerticleLine style={{ height: "40px" }} />
+        {/* heading section */}
+        <SectionHeading p={"Welcome"} text={"To Our Family"} />
+
+        {/* vertical line */}
+        <VerticleLine style={{ height: "100px" }} />
+        {/* section details */}
+        <Col md={4}>
           <div className="border p-3 bg-white" style={{ borderRadius: "1rem" }}>
             <div className="mb-5">
               <h1 className="text-center">Log In</h1>
-              <p>
+              <p className="lead">
                 Hey, there. Enter your email and password to sign in to your
                 account
               </p>
