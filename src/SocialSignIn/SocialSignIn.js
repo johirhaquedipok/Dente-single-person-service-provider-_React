@@ -23,29 +23,29 @@ const SocialSignIn = () => {
       <div>{errorElement}</div>
       <div className="text-center mt-4">Or Sign in with </div>
       <div className="d-md-flex  align-items-center justify-content-md-between  mb-2 mt-5">
-        <div className="d-grid ">
+        <div className="d-grid gap-2">
           <Button
-            variant="primary"
-            className="d-flex align-items-center justify-content-center mb-2"
+            variant="light"
+            className="d-flex align-items-center justify-content-center mb-2 border"
             onClick={() => signInWithGoogle()}
           >
-            <BsGoogle /> <span className="ms-2">Google </span>
+            <BsGoogle /> <span className="ms-1">Google </span>
           </Button>
         </div>
-        <div className="d-grid ">
+        <div className="d-grid gap-2 ">
           <Button
-            variant="secondary"
-            className=" d-flex align-items-center justify-content-center mb-2"
+            variant="light"
+            className=" d-flex align-items-center justify-content-center mb-2 mx-1 border"
           >
-            <BsGithub /> <span className="ms-2">GitHub </span>
+            <BsGithub /> <span className="ms-1">GitHub </span>
           </Button>
         </div>
-        <div className="d-grid ">
+        <div className="d-grid gap-2">
           <Button
-            variant="info"
-            className="d-flex align-items-center justify-content-center mb-2"
+            variant="light"
+            className="d-flex align-items-center justify-content-center mb-2 border"
           >
-            <BsFacebook /> <span className="ms-2">Facebook </span>
+            <BsFacebook /> <span className="ms-1">Facebook</span>
           </Button>
         </div>
       </div>

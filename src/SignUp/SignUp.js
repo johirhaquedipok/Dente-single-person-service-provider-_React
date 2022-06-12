@@ -37,61 +37,72 @@ const SignUp = () => {
   }
   return (
     <>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center my-5">
         <Col md={6}>
-          <Form noValidate validated={validated} onSubmit={handleSignUp}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                required
-                name="name"
-                type="name"
-                placeholder="Enter your name"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                required
-                name="email"
-                type="email"
-                placeholder="Enter email"
-              />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+          <div className="border p-3" style={{ borderRadius: "1rem" }}>
+            <div className="mb-5">
+              <h1 className="text-center">Sign Up</h1>
+              <p>
+                Hey, there. Enter your email and password to sign up to your new
+                account
+              </p>
+            </div>
+            <Form noValidate validated={validated} onSubmit={handleSignUp}>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  required
+                  name="name"
+                  type="name"
+                  placeholder="Enter your name"
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  required
+                  name="email"
+                  type="email"
+                  placeholder="Enter email"
+                />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                required
-                name={"password"}
-                type="password"
-                placeholder="Password"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check
-                onClick={() => setCheck(!check)}
-                type="checkbox"
-                label="I agree all terms and conditions"
-              />
-            </Form.Group>
-            <Button
-              disabled={check ? false : true}
-              variant={check ? "primary" : "light"}
-              type="submit"
-            >
-              Submit
-            </Button>
-          </Form>
-          <SocialSignIn />
-          <div className=" d-flex align-items-center justify-content-center">
-            Already have an account?
-            <Button variant="link" as={Link} to="/login">
-              Login
-            </Button>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  required
+                  name={"password"}
+                  type="password"
+                  placeholder="Password"
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check
+                  onClick={() => setCheck(!check)}
+                  type="checkbox"
+                  label="I agree all terms and conditions"
+                />
+              </Form.Group>
+              <div className="d-grid gap-2">
+                <Button
+                  disabled={check ? false : true}
+                  variant={check ? "primary" : "light"}
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </div>
+            </Form>
+            <SocialSignIn />
+            <div className=" d-flex align-items-center justify-content-center">
+              Already have an account?
+              <Button variant="link" as={Link} to="/login">
+                Login
+              </Button>
+            </div>
           </div>
         </Col>
       </Row>

@@ -54,51 +54,60 @@ const Login = () => {
   }, [navigate, user, from]);
   return (
     <>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center my-5">
         <Col md={6}>
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                required
-                type="email"
-                placeholder="Enter email"
-                ref={emailRef}
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                required
-                type="password"
-                placeholder="Password"
-                ref={passwordRef}
-              />
-            </Form.Group>
-            <div className="row mb-4">
-              <Col className="col">
-                <Button
-                  variant="link"
-                  type="submit"
-                  onClick={handleResetPassword}
-                >
-                  Forgot Your Password
-                </Button>
-              </Col>
+          <div className="border p-3" style={{ borderRadius: "1rem" }}>
+            <div className="mb-5">
+              <h1 className="text-center">Log In</h1>
+              <p>
+                Hey, there. Enter your email and password to sign in to your
+                account
+              </p>
             </div>
-            <div className="d-grid gap-2">
-              <Button variant="primary" type="submit">
-                Sing in
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  required
+                  type="email"
+                  placeholder="Enter email"
+                  ref={emailRef}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  required
+                  type="password"
+                  placeholder="Password"
+                  ref={passwordRef}
+                />
+              </Form.Group>
+              <div className="row mb-4">
+                <Col className="col">
+                  <Button
+                    variant="link"
+                    type="submit"
+                    onClick={handleResetPassword}
+                  >
+                    Forgot Your Password
+                  </Button>
+                </Col>
+              </div>
+              <div className="d-grid gap-2">
+                <Button variant="primary" type="submit">
+                  Sing in
+                </Button>
+              </div>
+            </Form>
+            <SocialSignIn />
+            <div className=" d-flex align-items-center justify-content-center">
+              Don't have any account?
+              <Button variant="link" as={Link} to="/signup">
+                Register Now
               </Button>
             </div>
-          </Form>
-          <SocialSignIn />
-          <div className=" d-flex align-items-center justify-content-center">
-            Don't have any account?
-            <Button variant="link" as={Link} to="/signup">
-              Register Now
-            </Button>
           </div>
         </Col>
       </Row>
