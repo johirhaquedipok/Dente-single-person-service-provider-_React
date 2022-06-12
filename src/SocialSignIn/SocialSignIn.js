@@ -1,21 +1,33 @@
 import { Button } from "react-bootstrap";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import auth from "../firebase.init";
 const SocialSignIn = () => {
   const navigate = useNavigate();
+  // google sign in
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+
+  // github sign in
+  const [signInWithGithub, githubUser, githubLoading, githubError] =
+    useSignInWithGithub(auth);
   let errorElement;
-  if (googleError) {
+  if (googleError || githubError) {
     errorElement = (
       <div>
-        <p className="text-danger">Error: {googleError.message}</p>
+        <p className="text-danger">
+          Error: {googleError?.message} {githubError?.message}
+        </p>
       </div>
     );
   }
-  if (googleUser) {
+
+  // after succesful sign in it will navigate you to the home page
+  if (googleUser || githubUser) {
     navigate("/home");
   }
   return (
@@ -36,6 +48,7 @@ const SocialSignIn = () => {
           <Button
             variant="light"
             className=" d-flex align-items-center justify-content-center mb-2 mx-1 border"
+            onClick={() => signInWithGithub()}
           >
             <BsGithub /> <span className="ms-1">GitHub </span>
           </Button>

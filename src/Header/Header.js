@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import CustomLink from "../CustomLink/CustomLink";
 import auth from "../firebase.init";
 
 const Header = () => {
@@ -15,42 +15,26 @@ const Header = () => {
   return (
     <Navbar bg="light" expand="sm" className="border-bottom">
       <Container>
-        <Navbar.Brand as={Link} to="/home">
-          Dente
-        </Navbar.Brand>
+        <CustomLink to="/home">Dente</CustomLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
+            <CustomLink to="/">Home</CustomLink>
 
-            <Nav.Link as={Link} to="/welcome">
-              Welcome
-            </Nav.Link>
-            <Nav.Link as={Link} to="/blog">
-              Blog
-            </Nav.Link>
-            <Nav.Link as={Link} to="/aboutme">
-              AboutMe
-            </Nav.Link>
+            <CustomLink to="/welcome">Welcome</CustomLink>
+            <CustomLink to="/blog">Blog</CustomLink>
+            <CustomLink to="/aboutme">AboutMe</CustomLink>
           </Nav>
           <Nav className="ms-auto">
             {user ? (
               <>
                 <Button onClick={handleSignOut}>Sign Out</Button>
-                <Nav.Link as={Link} to="/myprofile">
-                  MyProfile
-                </Nav.Link>
+                <CustomLink to="/myprofile">MyProfile</CustomLink>
               </>
             ) : (
               <>
-                <Nav.Link as={Link} to="/login">
-                  Login
-                </Nav.Link>
-                <Nav.Link as={Link} to="/signup">
-                  Sign Up
-                </Nav.Link>
+                <CustomLink to="/login">Login</CustomLink>
+                <CustomLink to="/signup">Sign Up</CustomLink>
               </>
             )}
           </Nav>

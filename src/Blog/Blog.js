@@ -30,14 +30,21 @@ const Blog = () => {
                   Difference between authorization and authentication
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  <div>
+                    <p>
+                      Authentication verifies the user's identity to give him
+                      the access of the system. The process challenges the user
+                      to validate credentials (for example, through passwords,
+                      answers to security questions, or facial recognition)
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      While, Authorization means what a user can access like
+                      specific applications, files, and data. And authorization
+                      comes into play after authentication.
+                    </p>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
@@ -46,14 +53,18 @@ const Blog = () => {
                   implement authentication?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  <p>
+                    Firebase provides backend services and uses eady-made UI
+                    libraries to authenticate users and also easy-to-use
+                    SDKs(software development toolkit).It has so many
+                    authentication varities like using passwords, phone numbers,
+                    popular federated identity providers like Google, Facebook
+                    and Twitter, and more.
+                  </p>
+                  <p>
+                    There are some ways to authenticate can be done through
+                    cards, retina scans, voice recognition, and fingerprints.
+                  </p>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
@@ -62,14 +73,9 @@ const Blog = () => {
                   authentication?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  <p>Firebase provides other than authentication</p>
+                  Cloud Firestore. Cloud Functions. Authentication. Hosting.
+                  Cloud Storage. Google Analytics. Predictions. Cloud Messaging.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
