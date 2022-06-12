@@ -7,9 +7,11 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Login from "./Login/Login";
 import MyProfile from "./MyProfile/MyProfile";
+import NotFound from "./NotFound/NotFound";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import ServiceDetails from "./ServiceDetails/ServiceDetails";
 import SignUp from "./SignUp/SignUp";
+import Welcome from "./Welcome/Welcome";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/services/:serviceId" element={<ServiceDetails />} />
+          <Route path="/welcome" element={<Welcome />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/checkout"
@@ -39,6 +42,7 @@ function App() {
             }
           />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Container>
       <Footer />

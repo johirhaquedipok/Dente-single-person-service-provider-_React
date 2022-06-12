@@ -4,7 +4,7 @@ const VerticleLine = ({ style }) => {
       className="d-flex align-items-center justify-content-center"
       style={style}
     >
-      <div class="vr"></div>
+      <div className="vr"></div>
     </div>
   );
 };
