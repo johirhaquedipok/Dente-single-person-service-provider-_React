@@ -13,19 +13,19 @@ Home page will have a header (simple navbar), banner, services section, and a fo
 Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.👍
 The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button.👍
 
-Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page
+Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page ⚠🟥 baki ache answer⚠🟥
 
-You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description.
+You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description. ⚠🟥 baki ache answer⚠🟥
 
 If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.👍
 
 You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react firebase hook to implement the login system. And don't forget to make the Email and password field a required field.👍
 
-Also, implement at least one extra login, which could be (facebook, github, google, etc).
+Also, implement at least one extra login, which could be (facebook, github, google, etc).⚠🟥 baki ache answer⚠🟥
 
 Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.👍
 
-Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route
+Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route ⚠🟥 baki ache answer⚠🟥
 
 13.1 Difference between authorization and authentication ⚠🟥 baki ache answer⚠🟥
 
@@ -39,7 +39,7 @@ Create a 404 page (not found page)👍
 Minimum 9 meaningful git commit👍
 
 ##Bonus:
-Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No lorem ipsum please.
+Make the website meaningful and consistent in look and feel. Give your website a relevant name. Images and all the content of the website have to be appropriate. No lorem ipsum please.👍
 Meaningful readme.md file containing your website name, and link to your live site. And at least five bullet points mentioning your website's different features and functionality. And a list of technologies (frameworks, libraries) used in your project.
 Make the home page of your website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.
 Clean and organized Code. Organize components and add comments when needed
@@ -49,23 +49,24 @@ Add a link for Password reset (use toast)
 
 ##Optional But Highly Recommended:
 Your checkout page will be a dynamic route with route parameter having the id of the service user created. In the checkout page, you will have a simple form that you will have fields for user name, user email address, address, and phone number. Once the user submits the form, you will display the user, thank you for the booking.
-Use the Environment variable to hide the firebase key
+Use the Environment variable to hide the firebase key 👍
 Add active routes to see which route you are.
-If possible, make the entire website responsive. Once you are done making the home page responsive, you wont need much things to do to make the entire website responsive.
+If possible, make the entire website responsive. Once you are done making the home page responsive, you wont need much things to do to make the entire website responsive. 👍
+
 Optional:
 For the Checkout page, you can use basic html form or any css library. However, we encourage you to try out the react hook form.
 Add some mouseover animation while taking the mouse on the services card
 If you want to take a challenge. consider using react-leaflet anywhere in your application
-Please Use icons whenever applicable and use fonts
+Please Use icons whenever applicable and use fonts 👍
 Make the footer a little more realistic
-Optimize your images
-Add something extra of your own. This will help you in the future to differentiate your project from others.
+Optimize your images 👍
+Add something extra of your own. This will help you in the future to differentiate your project from others. 👍
 Allow creation of multiple accounts with the same email address (is optional)
 Additional information:
-If needed, create your own fake data. You can load the data from a .json file or host it anywhere you want.
-You can use a local image or host image anywhere or both.
-You are free to use any CSS library (bootstrap, tailwind) you want. if you want, you can use both bootstrap and react-bootstrap. Also, if you want, you can use any tailwind component library.
-If needed you can mix CSS framework with a component library
+If needed, create your own fake data. You can load the data from a .json file or host it anywhere you want. 👍
+You can use a local image or host image anywhere or both. 👍
+You are free to use any CSS library (bootstrap, tailwind) you want. if you want, you can use both bootstrap and react-bootstrap. Also, if you want, you can use any tailwind component library. 👍
+If needed you can mix CSS framework with a component library 👍
 Try to host your site on Firebase (netlifiy host will need extra configuration)
 If you have any issues with hosting or Github push, please join the Github and deploy a related support session
 What to submit:
