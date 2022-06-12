@@ -24,6 +24,18 @@ const Header = () => {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
+
+            <Nav.Link as={Link} to="/welcome">
+              Welcome
+            </Nav.Link>
+            <Nav.Link as={Link} to="/blog">
+              Blog
+            </Nav.Link>
+            <Nav.Link as={Link} to="/aboutme">
+              AboutMe
+            </Nav.Link>
+          </Nav>
+          <Nav className="ms-auto">
             {user ? (
               <>
                 <Button onClick={handleSignOut}>Sign Out</Button>
@@ -41,15 +53,6 @@ const Header = () => {
                 </Nav.Link>
               </>
             )}
-            <Nav.Link as={Link} to="/welcome">
-              Welcome
-            </Nav.Link>
-            <Nav.Link as={Link} to="/blog">
-              Blog
-            </Nav.Link>
-            <Nav.Link as={Link} to="/aboutme">
-              AboutMe
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

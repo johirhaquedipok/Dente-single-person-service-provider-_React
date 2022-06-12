@@ -27,13 +27,13 @@ Once logged in, the log out/sign out button should appear on the header, which w
 
 Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route
 
-13.1 Difference between authorization and authentication
+13.1 Difference between authorization and authentication ⚠🟥 baki ache answer⚠🟥
 
-13.2 Why are you using firebase? What other options do you have to implement authentication?
+13.2 Why are you using firebase? What other options do you have to implement authentication? ⚠🟥 baki ache answer⚠🟥
 
-13.3 What other services does firebase provide other than authentication
+13.3 What other services does firebase provide other than authentication⚠🟥 baki ache answer⚠🟥
 
-You will create an about me page. It could be the about route. There you will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal.
+You will create an about me page. It could be the about route. There you will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal. ⚠🟥 baki ache answer⚠🟥
 
 Create a 404 page (not found page)👍
 Minimum 9 meaningful git commit👍
