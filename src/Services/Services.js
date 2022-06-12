@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
 import Service from "../Service/Service";
 const Services = () => {
@@ -15,11 +16,9 @@ const Services = () => {
       {/* vertical line */}
       <div className=" mt-4">
         <VerticleLine style={{ height: "40px" }} />
+        {/* heading section */}
+        <SectionHeading p={"SERVICES"} text={"Toothcare Services"} />
 
-        <div className="text-center ">
-          <h4>SERVICES</h4>
-          <h2>Toothcare Services</h2>
-        </div>
         {/* vertical line */}
         <VerticleLine style={{ height: "150px" }} />
       </div>
