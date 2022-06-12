@@ -37,9 +37,9 @@ const SignUp = () => {
   }
   return (
     <>
-      <Row className="justify-content-center my-5">
+      <Row className="justify-content-center my-3 bg-light py-4">
         <Col md={6}>
-          <div className="border p-3" style={{ borderRadius: "1rem" }}>
+          <div className="border p-3 bg-white" style={{ borderRadius: "1rem" }}>
             <div className="mb-5">
               <h1 className="text-center">Sign Up</h1>
               <p>
