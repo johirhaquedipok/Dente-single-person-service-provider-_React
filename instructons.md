@@ -45,8 +45,8 @@ And at least five bullet points mentioning your website's different features and
 Make the home page of your website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.👍
 Clean and organized Code. Organize components and add comments when needed 👍
 Display error when user email address or password don't match. 👍
-Send Email Verification. Don't worry if the email goes to the spam folder or it doesn't go at all.⚠🟥baki ache⚠🟥 As long as your code is there, you will be fine.
-Add a link for Password reset (use toast) ⚠🟥baki ache⚠🟥
+Send Email Verification. Don't worry if the email goes to the spam folder or it doesn't go at all.👍 As long as your code is there, you will be fine.
+Add a link for Password reset (use toast) 👍
 
 ##Optional But Highly Recommended:
 Your checkout page will be a dynamic route with route parameter having the id of the service user created. In the checkout page, you will have a simple form that you will have fields for user name, user email address, address, and phone number. Once the user submits the form, you will display the user, thank you for the booking.

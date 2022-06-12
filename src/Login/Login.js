@@ -1,16 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
-import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
-} from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
 import auth from "../firebase.init";
+import Loading from "../Loading/Loading";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
 const Login = () => {
@@ -21,9 +19,11 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-  // firebase reset password with email
-  const [sendPasswordResetEmail, sending, resetError] =
-    useSendPasswordResetEmail(auth);
+  // loading
+
+  if (loading) {
+    <Loading />;
+  }
 
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -48,24 +48,12 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   }
 
-  // reset password for login
-  const handleResetPassword = async () => {
-    const email = emailRef.current.value;
-    if (email) {
-      await sendPasswordResetEmail(email);
-      toast("Email Sent");
-    }
-  };
-
   // errror message
   let errorElement;
-  if (error || resetError) {
+  if (error) {
     errorElement = (
       <div>
-        <p className="text-danger">
-          Error: {error?.message}
-          {resetError?.message}
-        </p>
+        <p className="text-danger">Error: {error?.message}</p>
       </div>
     );
   }
@@ -119,11 +107,7 @@ const Login = () => {
               </Form.Group>
               <div className="row mb-4">
                 <Col className="col">
-                  <Button
-                    variant="link"
-                    type="submit"
-                    onClick={handleResetPassword}
-                  >
+                  <Button variant="link" type="submit" as={Link} to="/reset">
                     Forgot Your Password
                   </Button>
                 </Col>

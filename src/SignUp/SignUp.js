@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
 import auth from "../firebase.init";
+import Loading from "../Loading/Loading";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
 const SignUp = () => {
@@ -26,7 +27,9 @@ const SignUp = () => {
 
   // firebse update user hook
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+  if (loading || updating) {
+    <Loading />;
+  }
   //  sign up button onClick handler
   const handleSignUp = async (event) => {
     event.preventDefault();
