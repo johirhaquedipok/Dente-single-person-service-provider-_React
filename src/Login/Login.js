@@ -14,31 +14,37 @@ import auth from "../firebase.init";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
 const Login = () => {
+  // react bootstrap validation
   const [validated, setValidated] = useState(false);
 
+  // firebase sing in with email and password
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  // firebase reset password with email
   const [sendPasswordResetEmail, sending, resetError] =
     useSendPasswordResetEmail(auth);
 
   const emailRef = useRef("");
   const passwordRef = useRef("");
 
+  // react router dom  hook
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
   // submit email and password for login
   function handleSubmit(event) {
+    // react bootstrap validation
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
     }
-    setValidated(true);
-
+    // firebase sign in
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+    setValidated(true);
     signInWithEmailAndPassword(email, password);
   }
 
@@ -49,11 +55,27 @@ const Login = () => {
     toast("Email Sent");
   };
 
+  // errror message
+  let errorElement;
+  if (error || resetError) {
+    errorElement = (
+      <div>
+        <p className="text-danger">
+          Error: {error?.message}
+          {resetError?.message}
+        </p>
+      </div>
+    );
+  }
+
+  // after succesful sign in it will navigate you to the home page
+  // this use Effect is used for broweserrouter warning in the console while loggin in with social media
   useEffect(() => {
     if (user) {
       navigate(from, { replace: true });
     }
   }, [navigate, user, from]);
+
   return (
     <>
       <Row className="justify-content-center mb-3 bg-light py-4">
@@ -110,7 +132,13 @@ const Login = () => {
                 </Button>
               </div>
             </Form>
+
+            {/* Error message */}
+            {errorElement}
+
+            {/* socila media sign in  */}
             <SocialSignIn />
+            {/* sign up account toggle */}
             <div className=" d-flex align-items-center justify-content-center">
               Don't have any account?
               <Button variant="link" as={Link} to="/signup">
@@ -121,6 +149,7 @@ const Login = () => {
         </Col>
       </Row>
 
+      {/* toast */}
       <ToastContainer />
     </>
   );

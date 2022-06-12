@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import {
   useCreateUserWithEmailAndPassword,
@@ -11,14 +11,25 @@ import auth from "../firebase.init";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
 const SignUp = () => {
+  // react bootstrap validation
   const [validated, setValidated] = useState(false);
+
+  // react router dom hook
   const navigate = useNavigate();
+  // checkbox state for sign up button enable disable
   const [check, setCheck] = useState(false);
+
+  // firebse create user hook
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+  // firebse update user hook
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  //  sign up button onClick handler
   const handleSignUp = async (event) => {
     event.preventDefault();
+    //  bootstrap validation
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
@@ -29,14 +40,20 @@ const SignUp = () => {
     const password = event.target.password.value;
 
     setValidated(true);
+
     await createUserWithEmailAndPassword(email, password);
 
     await updateProfile({ displayName: name });
     if (user) alert("Updated email address");
   };
-  if (user) {
-    navigate("/home");
-  }
+
+  // after succesful sign up it will navigate you to the home page
+  // this use Effect is used for broweserrouter warning in the console while loggin in with social media
+  useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
+  }, [navigate, user]);
   return (
     <>
       <Row className="justify-content-center mb-3 bg-light py-4">
