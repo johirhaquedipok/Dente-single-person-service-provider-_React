@@ -13,7 +13,7 @@ Home page will have a header (simple navbar), banner, services section, and a fo
 Add One extra section on the home page in addition to the 4 sections (header, banner, services, and footer) mentioned above.👍
 The Services section will have at least 3 services. You can put one, two, or more services in a row based on your design. Each service should have a relevant name, price, image, short description, and a specific button.👍
 
-Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page ⚠🟥 baki ache answer⚠🟥
+Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page 👍
 
 You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description. ⚠🟥 baki ache answer⚠🟥
 
@@ -21,17 +21,17 @@ If you reload the protected/private route (after login), this page will not redi
 
 You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react firebase hook to implement the login system. And don't forget to make the Email and password field a required field.👍
 
-Also, implement at least one extra login, which could be (facebook ⚠🟥, github, google, etc).👍
+Also, implement at least one extra login, which could be (facebook, github, google, etc).👍
 
 Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.👍
 
 Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route 👍
 
-13.1 Difference between authorization and authentication ⚠🟥 baki ache answer⚠🟥
+13.1 Difference between authorization and authentication 👍
 
-13.2 Why are you using firebase? What other options do you have to implement authentication? ⚠🟥 baki ache answer⚠🟥
+13.2 Why are you using firebase? What other options do you have to implement authentication? 👍
 
-13.3 What other services does firebase provide other than authentication⚠🟥 baki ache answer⚠🟥
+13.3 What other services does firebase provide other than authentication👍
 
 You will create an about me page. It could be the about route. There you will put your name and your image (picture is optional. However, if you put a photo, please put a professional look picture). And write a small paragraph (3-5 lines) about your goal. And how you will work hard to achieve your goal. ⚠🟥 baki ache answer⚠🟥
 
@@ -44,7 +44,7 @@ Meaningful readme.md file containing your website name, and link to your live si
 And at least five bullet points mentioning your website's different features and functionality. And a list of technologies (frameworks, libraries) used in your project.👍
 Make the home page of your website responsive. Make sure the site looks different on desktop and mobile responsive. Tablet responsive is optional.👍
 Clean and organized Code. Organize components and add comments when needed 👍
-Display error when user email address or password don't match. ⚠🟥baki ache⚠🟥
+Display error when user email address or password don't match. 👍
 Send Email Verification. Don't worry if the email goes to the spam folder or it doesn't go at all.⚠🟥baki ache⚠🟥 As long as your code is there, you will be fine.
 Add a link for Password reset (use toast) ⚠🟥baki ache⚠🟥
 

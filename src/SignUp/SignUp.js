@@ -16,6 +16,7 @@ const SignUp = () => {
 
   // react router dom hook
   const navigate = useNavigate();
+
   // checkbox state for sign up button enable disable
   const [check, setCheck] = useState(false);
 
@@ -38,8 +39,7 @@ const SignUp = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-
-    setValidated(true);
+    errorElement = setValidated(true);
 
     await createUserWithEmailAndPassword(email, password);
 
@@ -47,6 +47,17 @@ const SignUp = () => {
     if (user) alert("Updated email address");
   };
 
+  let errorElement;
+  if (error || updateError) {
+    errorElement = (
+      <div>
+        <p className="text-danger">
+          Error: {error?.message}
+          {updateError?.message}
+        </p>
+      </div>
+    );
+  }
   // after succesful sign up it will navigate you to the home page
   // this use Effect is used for broweserrouter warning in the console while loggin in with social media
   useEffect(() => {
@@ -72,6 +83,7 @@ const SignUp = () => {
                 Hey, there. Enter your email and password to sign up to your new
                 account
               </p>
+              {errorElement}
             </div>
             <Form noValidate validated={validated} onSubmit={handleSignUp}>
               <Form.Group className="mb-3" controlId="formBasicName">
