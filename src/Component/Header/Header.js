@@ -34,7 +34,8 @@ const Header = () => {
             {user ? (
               <>
                 <span className="me-3 nav-link">
-                  {user.displayName} <BsFillPersonFill />
+                  {user?.displayName.slice(0, 3).concat("..")}{" "}
+                  <BsFillPersonFill />
                 </span>
 
                 <Button onClick={handleSignOut}>Sign Out</Button>
