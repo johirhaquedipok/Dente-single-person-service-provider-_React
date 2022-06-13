@@ -59,7 +59,6 @@ const Welcome = () => {
                       <Card.Text className="lead">Dental Awards</Card.Text>
                     </Card.Body>
                   </Card>
-                  {/* https://preview.themeforest.net/item/donto-dental-clinic-medical-health-react-template/full_screen_preview/28998255 */}
                 </Col>
               </Row>
             </Col>
