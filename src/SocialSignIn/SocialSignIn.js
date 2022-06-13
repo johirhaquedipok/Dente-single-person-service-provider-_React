@@ -56,7 +56,7 @@ const SocialSignIn = () => {
     <>
       <div>{errorElement}</div>
       <div className="text-center mt-4">Or Sign in with </div>
-      <div className="d-md-flex  align-items-center justify-content-md-between mb-2 mt-5">
+      <div className="d-lg-flex  align-items-center justify-content-lg-between mb-2 mt-5">
         <div className="d-grid gap-2">
           <Button
             variant="light"

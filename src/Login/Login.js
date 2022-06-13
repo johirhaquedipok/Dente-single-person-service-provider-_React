@@ -77,7 +77,7 @@ const Login = () => {
           {/* vertical line */}
           <VerticleLine style={{ height: "100px" }} />
           {/* section details */}
-          <Col md={4}>
+          <Col md={5} xs={12}>
             <div
               className="border p-3 bg-white"
               style={{ borderRadius: "1rem" }}
