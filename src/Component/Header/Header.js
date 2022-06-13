@@ -34,7 +34,7 @@ const Header = () => {
             {user ? (
               <>
                 <span className="me-3 nav-link">
-                  {user?.displayName.slice(0, 3).concat("..")}{" "}
+                  {user?.displayName?.slice(0, 3).concat("..")}{" "}
                   <BsFillPersonFill />
                 </span>
 
