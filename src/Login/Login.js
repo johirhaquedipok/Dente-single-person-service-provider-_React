@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
@@ -68,72 +68,77 @@ const Login = () => {
 
   return (
     <>
-      <Row className="justify-content-center mb-3 bg-light py-4">
-        <VerticleLine style={{ height: "40px" }} />
-        {/* heading section */}
-        <SectionHeading p={"Welcome"} text={"To Our Family"} />
+      <Container>
+        <Row className="justify-content-center mb-3 bg-light py-4">
+          <VerticleLine style={{ height: "40px" }} />
+          {/* heading section */}
+          <SectionHeading p={"Welcome"} text={"To Our Family"} />
 
-        {/* vertical line */}
-        <VerticleLine style={{ height: "100px" }} />
-        {/* section details */}
-        <Col md={4}>
-          <div className="border p-3 bg-white" style={{ borderRadius: "1rem" }}>
-            <div className="mb-5">
-              <h3 className="text-center">Log In</h3>
-              <p className="lead">
-                Hey, there. Enter your email and password to sign in to your
-                account
-              </p>
-            </div>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  placeholder="Enter email"
-                  ref={emailRef}
-                />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  required
-                  type="password"
-                  placeholder="Password"
-                  ref={passwordRef}
-                />
-              </Form.Group>
-              <div className="row mb-4">
-                <Col className="col">
-                  <Button variant="link" type="submit" as={Link} to="/reset">
-                    Forgot Your Password
-                  </Button>
-                </Col>
+          {/* vertical line */}
+          <VerticleLine style={{ height: "100px" }} />
+          {/* section details */}
+          <Col md={4}>
+            <div
+              className="border p-3 bg-white"
+              style={{ borderRadius: "1rem" }}
+            >
+              <div className="mb-5">
+                <h3 className="text-center">Log In</h3>
+                <p className="lead">
+                  Hey, there. Enter your email and password to sign in to your
+                  account
+                </p>
               </div>
-              <div className="d-grid gap-2">
-                <Button variant="primary" type="submit">
-                  Sing in
+              <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    required
+                    type="email"
+                    placeholder="Enter email"
+                    ref={emailRef}
+                  />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    required
+                    type="password"
+                    placeholder="Password"
+                    ref={passwordRef}
+                  />
+                </Form.Group>
+                <div className="row mb-4">
+                  <Col className="col">
+                    <Button variant="link" type="submit" as={Link} to="/reset">
+                      Forgot Your Password
+                    </Button>
+                  </Col>
+                </div>
+                <div className="d-grid gap-2">
+                  <Button variant="primary" type="submit">
+                    Sing in
+                  </Button>
+                </div>
+              </Form>
+
+              {/* Error message */}
+              {errorElement}
+
+              {/* socila media sign in  */}
+              <SocialSignIn />
+              {/* sign up account toggle */}
+              <div className=" d-flex align-items-center justify-content-center">
+                Don't have any account?
+                <Button variant="link" as={Link} to="/signup">
+                  Register Now
                 </Button>
               </div>
-            </Form>
-
-            {/* Error message */}
-            {errorElement}
-
-            {/* socila media sign in  */}
-            <SocialSignIn />
-            {/* sign up account toggle */}
-            <div className=" d-flex align-items-center justify-content-center">
-              Don't have any account?
-              <Button variant="link" as={Link} to="/signup">
-                Register Now
-              </Button>
             </div>
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </Container>
 
       {/* toast */}
       <ToastContainer />

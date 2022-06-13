@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Service = ({ service }) => {
   const { id, name, price, description, img } = service;
   const navigate = useNavigate();
-  const handleService = (id) => {
-    navigate(`/services/${id}`);
-  };
+
   return (
     <Col>
       <Card
@@ -25,7 +23,7 @@ const Service = ({ service }) => {
           <Button
             variant="light"
             className="border"
-            onClick={() => handleService(id)}
+            onClick={() => navigate(`/services/${id}`)}
           >
             More Info
           </Button>

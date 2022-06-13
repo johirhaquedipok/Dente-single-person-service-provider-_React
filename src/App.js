@@ -12,6 +12,7 @@ import NotFound from "./NotFound/NotFound";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import ResetPassword from "./ResetPassword/ResetPassword";
 import ServiceDetails from "./ServiceDetails/ServiceDetails";
+import Services from "./Services/Services";
 import SignUp from "./SignUp/SignUp";
 import Welcome from "./Welcome/Welcome";
 
@@ -42,6 +43,7 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/services" element={<Services />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/aboutme" element={<AboutMe />} />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
 import Service from "../Service/Service";
@@ -11,6 +11,7 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+
   return (
     <>
       {/* vertical line */}
@@ -24,11 +25,13 @@ const Services = () => {
       </div>
 
       {/* card */}
-      <Row xs={1} md={2} lg={4} className="g-4 mt-4 ">
-        {services.map((service) => (
-          <Service key={service.id} service={service} />
-        ))}
-      </Row>
+      <Container>
+        <Row xs={1} md={2} lg={4} className="g-4 mt-4 ">
+          {services.map((service) => (
+            <Service key={service.id} service={service} />
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };
