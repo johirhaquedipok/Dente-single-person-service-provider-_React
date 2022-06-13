@@ -4,9 +4,9 @@ import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import { toast, ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import auth from "../../firebase.init";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
-import auth from "../firebase.init";
 import Loading from "../Loading/Loading";
 
 const ResetPassword = () => {

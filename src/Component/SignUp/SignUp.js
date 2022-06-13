@@ -5,9 +5,9 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
-import auth from "../firebase.init";
 import Loading from "../Loading/Loading";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
@@ -27,6 +27,10 @@ const SignUp = () => {
 
   // firebse update user hook
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  // error
+  let errorElement;
+
   if (loading || updating) {
     <Loading />;
   }
@@ -42,6 +46,7 @@ const SignUp = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+
     errorElement = setValidated(true);
 
     await createUserWithEmailAndPassword(email, password);
@@ -50,7 +55,6 @@ const SignUp = () => {
     if (user) alert("Updated email address");
   };
 
-  let errorElement;
   if (error || updateError) {
     errorElement = (
       <div>

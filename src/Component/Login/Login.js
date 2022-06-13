@@ -5,9 +5,9 @@ import { ToastContainer } from "react-toastify";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import auth from "../../firebase.init";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
-import auth from "../firebase.init";
 import Loading from "../Loading/Loading";
 import SocialSignIn from "../SocialSignIn/SocialSignIn";
 
@@ -20,7 +20,6 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
 
   // loading
-
   if (loading) {
     <Loading />;
   }
@@ -44,6 +43,7 @@ const Login = () => {
     // firebase sign in
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+
     setValidated(true);
     signInWithEmailAndPassword(email, password);
   }

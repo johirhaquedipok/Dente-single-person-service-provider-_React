@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import AboutMe from "./AboutMe/AboutMe";
-import Blog from "./Blog/Blog";
-import CheckOut from "./CheckOut/CheckOut";
-import Footer from "./Footer/Footer";
+import AboutMe from "./Component/AboutMe/AboutMe";
+import Blog from "./Component/Blog/Blog";
+import CheckOut from "./Component/CheckOut/CheckOut";
+import Footer from "./Component/Footer/Footer";
 
-import Header from "./Header/Header";
-import Home from "./Home/Home";
-import Login from "./Login/Login";
-import NotFound from "./NotFound/NotFound";
-import RequireAuth from "./RequireAuth/RequireAuth";
-import ResetPassword from "./ResetPassword/ResetPassword";
-import ServiceDetails from "./ServiceDetails/ServiceDetails";
-import Services from "./Services/Services";
-import SignUp from "./SignUp/SignUp";
-import Welcome from "./Welcome/Welcome";
+import Header from "./Component/Header/Header";
+import Home from "./Component/Home/Home";
+import Login from "./Component/Login/Login";
+import NotFound from "./Component/NotFound/NotFound";
+import RequireAuth from "./Component/RequireAuth/RequireAuth";
+import ResetPassword from "./Component/ResetPassword/ResetPassword";
+import ServiceDetails from "./Component/ServiceDetails/ServiceDetails";
+import Services from "./Component/Services/Services";
+import SignUp from "./Component/SignUp/SignUp";
+import Welcome from "./Component/Welcome/Welcome";
 
 function App() {
   return (

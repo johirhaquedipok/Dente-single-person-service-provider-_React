@@ -7,7 +7,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
-import auth from "../firebase.init";
+import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 const SocialSignIn = () => {
   // google sign in

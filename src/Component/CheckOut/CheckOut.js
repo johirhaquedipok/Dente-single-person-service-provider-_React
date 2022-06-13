@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import SectionHeading from "../CommonComponents/SectionHeading";
 import VerticleLine from "../CommonComponents/VerticleLine";
-import auth from "../firebase.init";
 import PopUp from "../PopUp/PopUp";
 
 const CheckOut = () => {
