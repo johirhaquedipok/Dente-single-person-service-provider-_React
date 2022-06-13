@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 import auth from "../firebase.init";
@@ -32,6 +33,10 @@ const Header = () => {
           <Nav className="ms-auto">
             {user ? (
               <>
+                <span className="me-3 nav-link">
+                  {user.displayName} <BsFillPersonFill />
+                </span>
+
                 <Button onClick={handleSignOut}>Sign Out</Button>
               </>
             ) : (
