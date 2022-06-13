@@ -1,4 +1,5 @@
 import { Col, Row } from "react-bootstrap";
+import { BsHouse, BsLink, BsPhone } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const OneFooter = () => {
@@ -12,23 +13,6 @@ const OneFooter = () => {
             Vokalia and Consonantia, there live the blind texts.
           </p>
         </div>
-        <ul style={{ listStyle: "none" }}>
-          <li>
-            <a href="#">
-              <span className="icon-twitter"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span className="icon-facebook"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span className="icon-instagram"></span>
-            </a>
-          </li>
-        </ul>
       </Col>
       <Col md={4}>
         <div className=" mb-4 ml-md-5">
@@ -74,23 +58,30 @@ const OneFooter = () => {
       </Col>
 
       <Col md={4}>
-        <div className="ftco-footer-widget mb-4">
-          <h2 className="ftco-heading-2">Office</h2>
-          <div className="block-23 mb-3">
-            <ul style={{ listStyle: "none" }}>
-              <li>
-                <span className="icon icon-map-marker"></span>
-                <span className="text">
-                  203 Fake St. Mountain View, Dhaka, Bangladesh
+        <div className=" mb-4">
+          <h2>Office</h2>
+          <div className="mb-3">
+            <ul className="list-unstyled">
+              <li className="d-flex align-items-center ">
+                <span className="me-1 ">
+                  <BsHouse />
                 </span>
+                <span>203 Fake St. Mountain View, Dhaka, Bangladesh</span>
               </li>
-              <li>
-                <span className="icon icon-phone"></span>
-                <span className="text">+2 392 3929 210</span>
+              <li className="d-flex align-items-center ">
+                <span className="me-1 ">
+                  <BsPhone />
+                </span>
+                <span>+2 392 3929 210</span>
               </li>
-              <li>
-                <span className="icon icon-envelope"></span>
-                <span className="text">https://github.com/johirhaquedipok</span>
+              <li className="d-flex align-items-center ">
+                <span className="me-1 ">
+                  <BsLink />
+                </span>
+
+                <span className="text-break">
+                  https://github.com/johirhaquedipok
+                </span>
               </li>
             </ul>
           </div>
