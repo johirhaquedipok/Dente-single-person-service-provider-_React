@@ -23,7 +23,11 @@ const AboutMe = () => {
               alt={"banner"}
             />
           </Col>
-          <Col md={6}></Col>
+          <Col lg={6} className="align-self-center">
+            <p className="display-3">
+              Staying excited and focused to do my best with 100% effort.
+            </p>
+          </Col>
         </Row>
       </Container>
     </div>

@@ -81,7 +81,7 @@ const SignUp = () => {
         <Col md={4}>
           <div className="border p-3 bg-white" style={{ borderRadius: "1rem" }}>
             <div className="mb-5">
-              <h1 className="text-center">Sign Up</h1>
+              <h3 className="text-center">Sign Up</h3>
               <p className="lead">
                 Hey, there. Enter your email and password to sign up to your new
                 account

@@ -18,13 +18,13 @@ const Blog = () => {
             <Image
               fluid
               src={
-                "https://donto-react.netlify.app/static/media/about-banner1.ce5f70ed.png"
+                "https://donto-react.netlify.app/static/media/hero-theeth.54c2c4e9.png"
               }
               alt={"banner"}
             />
           </Col>
           <Col md={6}>
-            <Accordion defaultActiveKey="0">
+            <Accordion defaultActiveKey="0" className="border-0 shadow-sm">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
                   Difference between authorization and authentication
