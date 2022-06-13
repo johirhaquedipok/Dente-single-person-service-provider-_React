@@ -7,7 +7,6 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Home from "./Home/Home";
 import Login from "./Login/Login";
-import MyProfile from "./MyProfile/MyProfile";
 import NotFound from "./NotFound/NotFound";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import ResetPassword from "./ResetPassword/ResetPassword";
@@ -35,14 +34,7 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route
-          path="/myprofile"
-          element={
-            <RequireAuth>
-              <MyProfile />
-            </RequireAuth>
-          }
-        />
+
         <Route path="/services" element={<Services />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/blog" element={<Blog />} />

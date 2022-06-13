@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import SectionHeading from "../CommonComponents/SectionHeading";
+import VerticleLine from "../CommonComponents/VerticleLine";
 import auth from "../firebase.init";
 import PopUp from "../PopUp/PopUp";
 
@@ -21,7 +23,7 @@ const CheckOut = () => {
   const [marks, setMarks] = useState("");
 
   // handle submit
-  let errorElement;
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
     handleShow();
@@ -38,12 +40,23 @@ const CheckOut = () => {
   };
   return (
     <>
+      {/* vertical line */}
+      <div className=" mt-4">
+        <VerticleLine style={{ height: "40px" }} />
+        {/* heading section */}
+        <SectionHeading
+          p={"Checkout"}
+          text={"Fill the form to checkout our service"}
+        />
+
+        {/* vertical line */}
+        <VerticleLine style={{ height: "150px" }} />
+      </div>
       <Container>
         <Row>
           <Col xs={12} lg={8}>
             <div>
-              <h1>Request Appointment</h1>
-              {errorElement}
+              <h1>Submit Your Info For Appointment</h1>
             </div>
             <div>
               <Form className="row mb-3" onSubmit={handleSubmitForm}>
@@ -104,15 +117,24 @@ const CheckOut = () => {
                   show={show}
                   textPop={textPop}
                 />
-                <Button
-                  variant="secondary"
-                  className="submit-btn"
-                  type="submit"
-                >
-                  Send Message
-                </Button>
+                <div>
+                  <Button
+                    variant="secondary"
+                    className="submit-btn"
+                    type="submit"
+                  >
+                    Send Message
+                  </Button>
+                </div>
               </Form>
             </div>
+          </Col>
+          <Col xs={12} lg={4}>
+            <Image
+              src={
+                "https://donto-react.netlify.app/static/media/hero-theeth.54c2c4e9.png"
+              }
+            />
           </Col>
         </Row>
       </Container>

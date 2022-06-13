@@ -49,7 +49,7 @@ Send Email Verification. Don't worry if the email goes to the spam folder or it 
 Add a link for Password reset (use toast) 👍
 
 ##Optional But Highly Recommended:
-Your checkout page will be a dynamic route with route parameter having the id of the service user created. In the checkout page, you will have a simple form that you will have fields for user name, user email address, address, and phone number. Once the user submits the form, you will display the user, thank you for the booking.
+Your checkout page will be a dynamic route with route parameter having the id of the service user created. In the checkout page, you will have a simple form that you will have fields for user name, user email address, address, and phone number. Once the user submits the form, you will display the user, thank you for the booking.👍
 Use the Environment variable to hide the firebase key 👍
 Add active routes to see which route you are.👍
 If possible, make the entire website responsive. Once you are done making the home page responsive, you wont need much things to do to make the entire website responsive. 👍

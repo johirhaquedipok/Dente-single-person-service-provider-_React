@@ -33,7 +33,6 @@ const Header = () => {
             {user ? (
               <>
                 <Button onClick={handleSignOut}>Sign Out</Button>
-                <CustomLink to="/myprofile">MyProfile</CustomLink>
               </>
             ) : (
               <>
