@@ -6,7 +6,7 @@ const Welcome = () => {
   return (
     <>
       {/* vertical line */}
-      <div className=" my-4">
+      <div className=" my-4" id="home#welcome">
         <VerticleLine style={{ height: "40px" }} />
         {/* heading section */}
         <SectionHeading p={"Welcome"} text={"To Our Family"} />

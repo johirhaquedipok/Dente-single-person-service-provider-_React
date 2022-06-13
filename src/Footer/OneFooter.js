@@ -1,4 +1,5 @@
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const OneFooter = () => {
   return (
@@ -34,29 +35,39 @@ const OneFooter = () => {
           <h2>Quick Links</h2>
           <ul style={{ listStyle: "none" }} className="list-unstyled">
             <li>
-              <a href="#" className="py-2 d-block text-decoration-none">
-                About
+              <a href="#home" className="py-2 d-block text-decoration-none">
+                Home
               </a>
             </li>
             <li>
-              <a href="#" className="py-2 d-block text-decoration-none">
-                Features
+              <a
+                href="#home#welcome"
+                className="py-2 d-block text-decoration-none"
+              >
+                Welcome
               </a>
             </li>
             <li>
-              <a href="#" className="py-2 d-block text-decoration-none">
-                Projects
+              <a
+                href="#home#service"
+                className="py-2 d-block text-decoration-none"
+              >
+                Service
               </a>
             </li>
             <li>
-              <a href="#" className="py-2 d-block text-decoration-none">
+              <Link
+                to="/blog"
+                href="#"
+                className="py-2 d-block text-decoration-none"
+              >
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="py-2 d-block text-decoration-none">
-                Contact
-              </a>
+              <Link to="/aboutme" className="py-2 d-block text-decoration-none">
+                AboutMe
+              </Link>
             </li>
           </ul>
         </div>
@@ -70,20 +81,16 @@ const OneFooter = () => {
               <li>
                 <span className="icon icon-map-marker"></span>
                 <span className="text">
-                  203 Fake St. Mountain View, San Francisco, California, USA
+                  203 Fake St. Mountain View, Dhaka, Bangladesh
                 </span>
               </li>
               <li>
-                <a href="#">
-                  <span className="icon icon-phone"></span>
-                  <span className="text">+2 392 3929 210</span>
-                </a>
+                <span className="icon icon-phone"></span>
+                <span className="text">+2 392 3929 210</span>
               </li>
               <li>
-                <a href="#">
-                  <span className="icon icon-envelope"></span>
-                  <span className="text">info@yourdomain.com</span>
-                </a>
+                <span className="icon icon-envelope"></span>
+                <span className="text">https://github.com/johirhaquedipok</span>
               </li>
             </ul>
           </div>

@@ -15,7 +15,7 @@ const Services = () => {
   return (
     <>
       {/* vertical line */}
-      <div className=" mt-4">
+      <div className=" mt-4" id="home#service">
         <VerticleLine style={{ height: "40px" }} />
         {/* heading section */}
         <SectionHeading p={"SERVICES"} text={"Toothcare Services"} />
