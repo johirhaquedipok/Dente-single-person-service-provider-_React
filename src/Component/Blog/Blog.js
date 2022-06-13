@@ -14,7 +14,7 @@ const Blog = () => {
       {/* section details */}
       <Container>
         <Row>
-          <Col lg={6} className="overflow-hidden">
+          <Col lg={6} md={6} className="overflow-hidden">
             <Image
               fluid
               src={
@@ -23,7 +23,7 @@ const Blog = () => {
               alt={"banner"}
             />
           </Col>
-          <Col md={6}>
+          <Col md={6} lg={6}>
             <Accordion defaultActiveKey="0" className="border-0 shadow-sm">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>

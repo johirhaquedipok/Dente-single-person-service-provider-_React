@@ -15,7 +15,7 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <Navbar bg="light" expand="sm" className="border-bottom">
+    <Navbar bg="light" expand="md" className="border-bottom">
       <Container>
         <Nav.Link as={Link} to="/home" className="fs-5 fw-bold">
           Dente
