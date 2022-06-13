@@ -129,11 +129,12 @@ const CheckOut = () => {
               </Form>
             </div>
           </Col>
-          <Col xs={12} lg={4}>
+          <Col xs={12} lg={4} className="overflow-hidden">
             <Image
               src={
                 "https://donto-react.netlify.app/static/media/hero-theeth.54c2c4e9.png"
               }
+              className="img-fluid"
             />
           </Col>
         </Row>
